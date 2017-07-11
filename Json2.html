@@ -21,11 +21,11 @@
 			{
 				if(kings[i].nm == input || kings[i].cty == input || kings[i].hse == input || kings[i].yrs == input)
 				{
-					document.write("Name: " + kings[i].nm + "<br>");
-					document.write("City: " + kings[i].cty + "<br>");
-					document.write("House: " + kings[i].hse + "<br>");
-					document.write("Years: " + kings[i].yrs + "<br>");
-					document.write("<br>")
+					document.body.innerHTML += ("Name: " + kings[i].nm + "<br>");
+					document.body.innerHTML += "City: " + kings[i].cty + "<br>";
+					document.body.innerHTML += "House: " + kings[i].hse + "<br>";
+					document.body.innerHTML += "Years: " + kings[i].yrs + "<br>";
+					document.body.innerHTML += "<br>"
 				}
 			}
 		}
