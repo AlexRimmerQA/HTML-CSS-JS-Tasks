@@ -1,0 +1,28 @@
+<html>
+	<head></head>
+	<body>
+		<script>
+			var input = 10103316;
+			while(input != 1) {
+				document.write(input);
+				document.write("<br>")
+				if(input % 3 == 0)
+				{
+					input /= 3;
+				}
+				else {
+					if((input+1) % 3 == 0) {
+						input++;
+						input /= 3;
+					}
+					else {
+						input--;
+						input /= 3;
+					}
+				}
+			}
+			document.write(input);
+		</script>
+	</body>
+	<footer></footer>
+</html>

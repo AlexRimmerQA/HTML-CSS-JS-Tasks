@@ -1,0 +1,21 @@
+<html>
+	<head></head>
+	<body>
+		<script>
+
+			var person = {
+				name: "Alex",
+				age: 66,
+				occupation: "Consultant"
+			}
+
+			function ageBetween(person, age1, age2) {
+				return ((person.age - age1) * (person.age - age2) <= 0)
+			}
+
+			alert("Is " + person.age + " between 20 and 40? " + ageBetween(person, 20, 40));
+
+		</script>
+	</body>
+	<footer></footer>
+</html>

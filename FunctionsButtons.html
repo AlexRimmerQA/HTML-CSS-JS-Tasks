@@ -1,0 +1,38 @@
+<html>
+
+<head>
+	<script>
+		var person = {
+			name: "Alex",
+			age: 23,
+			occupation: "Consultant"
+		};
+		function outputPerson(person) {
+			alert(person.name + person.age + person.occupation);
+		}
+		function editAge(person, newAge) {
+			person.age = newAge;
+		}
+		function square(x) {
+			return x * x;
+		}
+		function sumThree(a, b, c) {
+			return a + b + c;
+		}
+	</script>
+</head>
+
+<body>
+	<script>
+		alert("Square of 10 = " + square(10));
+		alert("1 + 2 + 3 = " + sumThree(1,2,3))
+		outputPerson(person);
+	</script>
+	<input type="button" value="Edit and Output Person" onclick="{ editAge(person, 50); outputPerson(person); }">
+</body>
+
+<footer>
+
+</footer>
+
+</html>
