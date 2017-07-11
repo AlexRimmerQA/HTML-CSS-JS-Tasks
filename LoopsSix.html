@@ -3,7 +3,9 @@
 	<body>
 		<script>
 			var input = 10103316;
+			var counter = 0;
 			while(input != 1) {
+				counter++;
 				document.write(input);
 				document.write("<br>")
 				if(input % 3 == 0)
@@ -22,6 +24,8 @@
 				}
 			}
 			document.write(input);
+			document.write("<br>");
+			document.write("Iterations:" + counter)
 		</script>
 	</body>
 	<footer></footer>
