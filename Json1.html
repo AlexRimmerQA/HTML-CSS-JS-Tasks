@@ -1,0 +1,42 @@
+<html>
+
+<head>
+	<script>
+		var requestURL = "https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/example.json";
+		var request = new XMLHttpRequest();
+		request.open("GET", requestURL);
+		request.responseType = "json";
+		request.send();
+
+		request.onload = function() {
+			var superheroes = request.response;
+			document.write("SQUAD <br>");
+			document.write("Squad Name: " + ": " + superheroes["squadName"] + "<br>");
+			document.write("Home Town" + ": " + superheroes["homeTown"] + "<br>");
+			document.write("Formed" + ": " + superheroes["formed"] + "<br>");
+			document.write("Secret Base" + ": " + superheroes["secretBase"] + "<br>");
+			document.write("Active" + ": " + superheroes["active"] + "<br>");
+			document.write("<br>");
+			document.write("MEMBERS <br>");
+			for(x in superheroes.members) {
+				document.write("&nbsp;&nbsp;" + "Name: " + superheroes.members[x].name + "<br>");
+				document.write("&nbsp;&nbsp;" + "Age: " + superheroes.members[x].age + "<br>");
+				document.write("&nbsp;&nbsp;" + "Secret Identity: " + superheroes.members[x].secretIdentity + "<br>");
+				document.write("&nbsp;&nbsp;" + "POWERS <br>");
+				for(y in superheroes.members[x].powers) {
+					document.write("&nbsp;&nbsp;&nbsp;&nbsp;" + superheroes.members[x].powers[y] + "<br>");
+				}
+				document.write("<br>")
+			}
+		}
+	</script>
+</head>
+
+<body>
+
+</body>
+<footer>
+
+</footer>
+
+</html>
