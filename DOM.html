@@ -1,17 +1,27 @@
 <html>
-	<head></head>
-	<body>
-		<script>
-			function createPar() {
-				document.body.innerHTML += ("<p id='para'></p>");
-			}
-			function changePar() {
-				document.getElementById('para').innerHTML = "Hello World!";
-			}
-			function removePar() {
-				document.getElementById('para').remove();
-			}
-		</script>
-	</body>
-	<footer></footer>
+
+<head>
+	
+</head>
+
+<body id="body">
+	<script>
+		function createPar() {
+			var par = document.createElement("P");
+			par.setAttribute("id", "para");
+			document.body.appendChild(par);
+		}
+		function changePar() {
+			var text = document.createTextNode("Hello World!");
+			document.getElementById("para").appendChild(text);
+		}
+		function removePar() {
+			document.getElementById("para").remove();
+		}
+	</script>
+	<button id="createPButton" onclick="createPar()">Create</button>
+	<button id="changePButton" onclick="changePar()">Change</button>
+	<button id="removePButton" onclick="removePar()">Remove</button>
+</body>
+
 </html>
