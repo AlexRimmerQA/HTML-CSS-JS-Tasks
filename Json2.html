@@ -1,0 +1,43 @@
+<html>
+
+<head>
+	<script>
+		var requestURL = "https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/kings.json";
+		var request = new XMLHttpRequest();
+		var response;
+		request.open("GET", requestURL);
+		request.responseType = "json";
+		request.send();
+
+		request.onload = function() {
+			response = request.response;
+		}
+
+		function search() {
+			var input = document.getElementById("textinput").value;
+			var kings = response;
+			//document.write(JSON.stringify(response));
+			for(var i = 0; i < kings.length; i++)
+			{
+				if(kings[i].nm == input || kings[i].cty == input || kings[i].hse == input || kings[i].yrs == input)
+				{
+					document.write("Name: " + kings[i].nm + "<br>");
+					document.write("City: " + kings[i].cty + "<br>");
+					document.write("House: " + kings[i].hse + "<br>");
+					document.write("Years: " + kings[i].yrs + "<br>");
+					document.write("<br>")
+				}
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<input type = "text" id = "textinput">
+	<button id = "searchButton" onclick = "search()">Search</button>
+</body>
+<footer>
+
+</footer>
+
+</html>
